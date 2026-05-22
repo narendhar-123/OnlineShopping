@@ -81,6 +81,9 @@ The application follows a **clean layered architecture** with strict separation 
 
 **Responsibilities:**
 - Define domain/business entities (e.g., Product, Order, Customer)
+- Create base entity classes for common properties (e.g., `BaseEntity` with `Id`, `CreatedDate`, etc.) Every entity must inherit from `BaseEntity`. BaseEntity must have an `Id` property, `CreatedDate`, `CreatedBy`, `ModifiedDate`, and `ModifiedBy`.
+- Define relationships between entities (e.g., one-to-many, many-to-many)
+- Every entity must have a unique identifier (e.g., `Id` property)
 
 **Rules:**
 - Used by Service and Repository layers only
@@ -121,6 +124,7 @@ The application follows a **clean layered architecture** with strict separation 
 - Repository tests → `{RepositoryName}.Test.cs`
 
 ---
+
 
 ## Technology Stack
 
@@ -196,6 +200,20 @@ Use Factory Pattern to select payment type.
 - Implement **Authentication using Azure AD**
 
 ---
+
+## Multi-Agent Workflow
+
+Follow multi-agent workflow:
+
+1. Use planner agent to break down the user story
+2. Use api agent to create controllers
+3. Use service agent for business logic
+4. Use repository agent for data layer
+5. Use test agent to create unit tests
+
+Architecture:
+Controller → Service → Repository → DB
+
 
 ## Architecture Constraints
 

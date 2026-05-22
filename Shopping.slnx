@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="Shopping.Web.Api/Shopping.Web.Api.csproj" />
+  <Project Path="Shopping.Web.DTO/Shopping.Web.DTO.csproj" />
+  <Project Path="Shopping.Web.Entities/Shopping.Web.Entities.csproj" />
+  <Project Path="Shopping.Web.Repository/Shopping.Web.Repository.csproj" />
+  <Project Path="Shopping.Web.Service/Shopping.Web.Service.csproj" />
+  <Project Path="Shopping.Web.Test/Shopping.Web.Test.csproj" />
+</Solution>

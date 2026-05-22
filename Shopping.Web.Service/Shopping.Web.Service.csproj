@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Shopping.Web.Repository\Shopping.Web.Repository.csproj" />
+    <ProjectReference Include="..\Shopping.Web.Entities\Shopping.Web.Entities.csproj" />
+    <ProjectReference Include="..\Shopping.Web.DTO\Shopping.Web.DTO.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>
