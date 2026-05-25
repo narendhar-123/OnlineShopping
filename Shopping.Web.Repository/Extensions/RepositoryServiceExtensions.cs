@@ -28,6 +28,9 @@ public static class RepositoryServiceExtensions
         // Register Item Repository
         services.AddScoped<IItemRepository, ItemRepository>();
 
+        // Register Order Repository
+        services.AddScoped<IOrderRepository, OrderRepository>();
+
         return services;
     }
 }
