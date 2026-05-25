@@ -9,7 +9,8 @@ public enum PaymentType
 {
     CreditCard,
     UPI,
-    NetBanking
+    NetBanking,
+    CashOnDelivery
 }
 
 /// <summary>
@@ -37,7 +38,8 @@ public class PaymentFactory : IPaymentFactory
         {
             { PaymentType.CreditCard, typeof(CreditCardPaymentProcessor) },
             { PaymentType.UPI, typeof(UPIPaymentProcessor) },
-            { PaymentType.NetBanking, typeof(NetBankingPaymentProcessor) }
+            { PaymentType.NetBanking, typeof(NetBankingPaymentProcessor) },
+            { PaymentType.CashOnDelivery, typeof(CashOnDeliveryPaymentProcessor) }
         };
     }
 

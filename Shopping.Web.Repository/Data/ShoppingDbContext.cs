@@ -14,6 +14,7 @@ public class ShoppingDbContext : DbContext
     }
 
     public DbSet<Item> Items => Set<Item>();
+    public DbSet<Order> Orders => Set<Order>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

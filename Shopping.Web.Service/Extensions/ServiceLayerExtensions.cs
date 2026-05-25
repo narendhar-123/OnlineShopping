@@ -2,7 +2,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Shopping.Web.Service.Implementation;
 using Shopping.Web.Service.Interfaces;
 using Shopping.Web.Service.Payments.Factory;
-using Shopping.Web.Service.Payments.Interfaces;
 
 namespace Shopping.Web.Service.Extensions;
 
@@ -18,9 +17,13 @@ public static class ServiceLayerExtensions
         services.AddScoped<CreditCardPaymentProcessor>();
         services.AddScoped<UPIPaymentProcessor>();
         services.AddScoped<NetBankingPaymentProcessor>();
+        services.AddScoped<CashOnDeliveryPaymentProcessor>();
 
         // Register Item Service
         services.AddScoped<IItemService, ItemService>();
+
+        // Register Order Service
+        services.AddScoped<IOrderService, OrderService>();
 
         return services;
     }
