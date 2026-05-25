@@ -13,8 +13,7 @@ public class ShoppingDbContext : DbContext
     {
     }
 
-    // DbSets will be added here as entities are created
-    // Example: public DbSet<Product> Products => Set<Product>();
+    public DbSet<Item> Items => Set<Item>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

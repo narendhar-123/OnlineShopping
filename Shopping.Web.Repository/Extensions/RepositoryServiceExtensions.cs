@@ -25,7 +25,8 @@ public static class RepositoryServiceExtensions
         // Register Generic Repository
         services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
-        // Additional repositories will be registered here
+        // Register Item Repository
+        services.AddScoped<IItemRepository, ItemRepository>();
 
         return services;
     }
